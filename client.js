@@ -187,7 +187,6 @@ function voiceEventHandler(voiceEvent) {
       const eventMsg = 'Outbound Call is connected';
       console.log(`[${callVoiceId}] ${eventMsg}`);
       sseMsg.push(eventMsg);
-      setTimeout(()=>{bridgeCall(callVoiceId, '12028528186' , '919972972207', () => {})},1000);
     } else if (voiceEvent.state === 'disconnected') {
       const eventMsg = 'Outbound Call is disconnected';
       console.log(`[${callVoiceId}] ${eventMsg}`);
@@ -209,7 +208,7 @@ function voiceEventHandler(voiceEvent) {
   if (voiceEvent.playstate !== undefined) {
     if (voiceEvent.playstate === 'playfinished' && voiceEvent.prompt_ref === 'welcome_prompt') {
        console.log ("["+callVoiceId+"] playfinsihed");
-       setTimeout(()=>{bridgeCall(callVoiceId, '12028528186' , '919972972207', () => {})},1000);   
+       setTimeout(()=>{bridgeCall(callVoiceId, process.env.FROM , process.env.BRIDGETO, () => {})},1000);   
     }
   }
 }
