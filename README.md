@@ -1,4 +1,4 @@
-# **Basic Client Examples to demonstrate Outbound Calls with bridging and start the recording using Enablex Voice APIs. **
+# Outbound Call Bridging and Recording: Using EnableX Programmable Voice APIs
 This example contains instructions how users can initiate Outbound Call with bridging and start the recording.
 
 
